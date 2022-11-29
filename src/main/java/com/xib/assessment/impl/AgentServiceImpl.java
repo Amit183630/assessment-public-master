@@ -63,7 +63,7 @@ public class AgentServiceImpl implements AgentService {
 	
 	@Override
 	public Agent assignTeam(long teamId, long agentId) {
-		log.info("Assigning Team:{} to the Agent:{}}",agentId,teamId);
+		log.info("Assigning Team:{} to the Agent:{}",agentId,teamId);
 		Team team=teamService.getTeam(teamId);
 		Agent agent=getAgent(agentId);
 		agent.setTeam(team);

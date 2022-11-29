@@ -46,6 +46,19 @@ public class TeamController {
 	}
 	
 
+	/**
+	 * This API returns all the teams 
+	 * which have are not assigned with any agent and manager
+	 * @return
+	 */
+	@GetMapping("/teams/empty")
+	public ResponseEntity<?> getEmptyTeamList(){
+		
+		return ResponseEntity.ok(
+				new DataResponse(true,
+						service.getEmptyTeams(), "Empty Teams retrieved succesfully"));
+	}
+	
 	
 	
 }
