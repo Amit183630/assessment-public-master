@@ -27,4 +27,12 @@ public interface TeamService {
 	 * @return Team
 	 */
 	Team addTeam(CreateTeamDTO createTeamDTO);
+	
+	/**
+	 * This service operation returns all the empty teams
+	 * @return
+	 */
+	List<TeamDTO> getEmptyTeams();
 }
+
+

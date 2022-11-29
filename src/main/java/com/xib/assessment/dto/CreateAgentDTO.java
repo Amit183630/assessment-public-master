@@ -13,7 +13,6 @@ import lombok.ToString;
 @ToString
 public class CreateAgentDTO {
 
-
     private String firstName;
     private String lastName;
     private String idNumber;

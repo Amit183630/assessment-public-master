@@ -43,14 +43,26 @@ public class LoadTestData {
         Set<Manager> maangersSet2=new HashSet<>();
         maangersSet2.add(manager3);
         maangersSet2.add(manager4);
+        
+
+        Manager manager5= createManager("AK", "Kumar");
+        Set<Manager> maangersSet3=new HashSet<>();
+        maangersSet3.add(manager5);
+        
         Team team1 = createTeam("Marvel",maangersSet1);
         Team team2 = createTeam("DC",maangersSet2);
 
+        //empty teams
+        Team test1Team=createTeam("Test1",maangersSet3);
+        createTeam("Test2",null);
+        
         createAgent("Bruce", "Banner", "1011125190081", team1);
         createAgent("Tony", "Stark", "6912115191083", team1);
         createAgent("Peter", "Parker", "7801115190084", team1);
         createAgent("Bruce", "Wayne", "6511185190085", team2);
         createAgent("Clark", "Kent", "5905115190086",team2);
+        
+        createAgent("Emilla", "Clark", "5905115190087",test1Team);
         
         createManager("Amit", "Kumar");
         createManager("Jatin", "Kumar");

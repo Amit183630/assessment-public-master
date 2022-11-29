@@ -9,6 +9,6 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 public class AgentDTO {
     private Long id;
-   private String firstName;
+    private String firstName;
     private String lastName;
 }

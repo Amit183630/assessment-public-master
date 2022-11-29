@@ -19,8 +19,12 @@ public class TeamServiceImpl implements TeamService{
 	TeamRepository repository;
 	@Override
 	public List<TeamDTO> getTeamList() {
-		
-		return repository.getAllTeam();
+
+		List<TeamDTO> list= repository.getAllTeam();
+		if(list.isEmpty()) {
+			throw new DataNotFoundException("Data not found");
+		}
+		return list;
 	}
 	
 	@Override
@@ -37,6 +41,15 @@ public class TeamServiceImpl implements TeamService{
 				.name(createTeamDTO.getName())
 				.build()
 				);
+	}
+	
+	@Override
+	public List<TeamDTO> getEmptyTeams() {
+		List<TeamDTO> list= repository.getEmptyTeams();
+		if(list.isEmpty()) {
+			throw new DataNotFoundException("Data not found");
+		}
+		return list;
 	}
 	
 }
